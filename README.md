@@ -12,6 +12,6 @@ Repackaged installation file to prevent Google Drive from installing as the ARM 
 2. Replace the Distribution file in the folder with the new downloaded Distribution file
 3. Repackage Google-Drive.pkg file
 	```
-	cd ..
+	cd Google-Drive
 	xar --compression none -cf ../GoogleDrive-AMD.pkg *
 	```
