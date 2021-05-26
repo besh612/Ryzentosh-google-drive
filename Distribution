@@ -40,11 +40,11 @@
 	<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64" active="is_intel()" version="45.3.0.0" auth="Root" installKBytes="149">#dfsfuse_x86_64.pkg</pkg-ref>
 	<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64" active="is_amd()" version="45.3.0.0" auth="Root" installKBytes="149">#dfsfuse_x86_64.pkg</pkg-ref>
 	<pkg-ref id="com.google.pkg.Keystone" version="1.3.16.173" auth="Root" installKBytes="0">#Google_Software_Update.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.x86_64" active="is_intel()" version="48.0.11.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.x86_64" active="is_amd()" version="48.0.11.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.shortcuts" version="48.0.11.0" auth="Root" installKBytes="220">#GoogleDriveShortcuts.pkg</pkg-ref>
+	<pkg-ref id="com.google.drivefs.x86_64" active="is_intel()" version="48.0.12.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
+	<pkg-ref id="com.google.drivefs.x86_64" active="is_amd()" version="48.0.12.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
+	<pkg-ref id="com.google.drivefs.shortcuts" version="48.0.12.0" auth="Root" installKBytes="220">#GoogleDriveShortcuts.pkg</pkg-ref>
 	<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.arm64" active="is_arm()" version="45.3.0.0" auth="Root" installKBytes="184">#dfsfuse_arm64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.arm64" active="is_arm()" version="48.0.11.0" auth="Root" installKBytes="350753">#GoogleDrive_arm64.pkg</pkg-ref>
+	<pkg-ref id="com.google.drivefs.arm64" active="is_arm()" version="48.0.12.0" auth="Root" installKBytes="350753">#GoogleDrive_arm64.pkg</pkg-ref>
 	<!--+==========================+
         |    JavaScript Scripts    | +==========================+-->
 	<script>
@@ -127,6 +127,7 @@
 
 		return tResult;
 	}
+
 
 	function is_intel()
 	{
