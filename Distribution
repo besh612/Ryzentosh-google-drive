@@ -1,53 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.5" authoringToolBuild="522" minSpecVersion="1.0">
-	<options customize="never" hostArchitectures="x86_64,arm64"/>
-	<volume-check script="volume_check()"/>
-	<!--+==========================+
-        |       Presentation       | +==========================+-->
-	<title>DISTRIBUTION_TITLE</title>
-	<background file="background" scaling="proportional" alignment="bottomleft"/>
-	<background-darkAqua file="background" scaling="proportional" alignment="bottomleft"/>
-	<!--+==========================+
-        |         Installer        | +==========================+-->
-	<choices-outline>
-		<line choice="installer_choice_1"/>
-		<line choice="installer_choice_2"/>
-		<line choice="installer_choice_3"/>
-		<line choice="installer_choice_4"/>
-		<line choice="installer_choice_5"/>
-		<line choice="installer_choice_6"/>
-	</choices-outline>
-	<choice id="installer_choice_1" title="Google Software Update" description="">
-		<pkg-ref id="com.google.pkg.Keystone"/>
-	</choice>
-	<choice id="installer_choice_2" title="Google Drive Intel" description="">
-		<pkg-ref id="com.google.drivefs.x86_64"/>
-	</choice>
-	<choice id="installer_choice_3" title="Google Drive Arm" description="">
-		<pkg-ref id="com.google.drivefs.arm64"/>
-	</choice>
-	<choice id="installer_choice_4" title="DFS FUSE INTEL" description="">
-		<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64"/>
-	</choice>
-	<choice id="installer_choice_5" title="DFS FUSE ARM" description="">
-		<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.arm64"/>
-	</choice>
-	<choice id="installer_choice_6" title="GSuite Shortcuts" description="">
-		<pkg-ref id="com.google.drivefs.shortcuts"/>
-	</choice>
-	<!--+==========================+
-        |    Package References    | +==========================+-->
-	<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64" active="is_intel()" version="45.3.0.0" auth="Root" installKBytes="149">#dfsfuse_x86_64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64" active="is_amd()" version="45.3.0.0" auth="Root" installKBytes="149">#dfsfuse_x86_64.pkg</pkg-ref>
-	<pkg-ref id="com.google.pkg.Keystone" version="1.3.16.173" auth="Root" installKBytes="0">#Google_Software_Update.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.x86_64" active="is_intel()" version="48.0.12.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.x86_64" active="is_amd()" version="48.0.12.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.shortcuts" version="48.0.12.0" auth="Root" installKBytes="220">#GoogleDriveShortcuts.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.filesystems.dfsfuse.arm64" active="is_arm()" version="45.3.0.0" auth="Root" installKBytes="184">#dfsfuse_arm64.pkg</pkg-ref>
-	<pkg-ref id="com.google.drivefs.arm64" active="is_arm()" version="48.0.12.0" auth="Root" installKBytes="350753">#GoogleDrive_arm64.pkg</pkg-ref>
-	<!--+==========================+
-        |    JavaScript Scripts    | +==========================+-->
-	<script>
+    <options customize="never" hostArchitectures="x86_64,arm64"/>
+    <volume-check script="volume_check()"/>
+    <!--+==========================+
+        |       Presentation       |
+        +==========================+-->
+    <title>DISTRIBUTION_TITLE</title>
+    <background file="background" scaling="proportional" alignment="bottomleft"/>
+    <background-darkAqua file="background" scaling="proportional" alignment="bottomleft"/>
+    <!--+==========================+
+        |         Installer        |
+        +==========================+-->
+    <choices-outline>
+        <line choice="installer_choice_1"/>
+        <line choice="installer_choice_2"/>
+        <line choice="installer_choice_3"/>
+        <line choice="installer_choice_4"/>
+        <line choice="installer_choice_5"/>
+        <line choice="installer_choice_6"/>
+    </choices-outline>
+    <choice id="installer_choice_1" title="Google Software Update" description="">
+        <pkg-ref id="com.google.pkg.Keystone"/>
+    </choice>
+    <choice id="installer_choice_2" title="Google Drive Intel" description="">
+        <pkg-ref id="com.google.drivefs.x86_64"/>
+    </choice>
+    <choice id="installer_choice_3" title="Google Drive Arm" description="">
+        <pkg-ref id="com.google.drivefs.arm64"/>
+    </choice>
+    <choice id="installer_choice_4" title="DFS FUSE INTEL" description="">
+        <pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64"/>
+    </choice>
+    <choice id="installer_choice_5" title="DFS FUSE ARM" description="">
+        <pkg-ref id="com.google.drivefs.filesystems.dfsfuse.arm64"/>
+    </choice>
+    <choice id="installer_choice_6" title="GSuite Shortcuts" description="">
+        <pkg-ref id="com.google.drivefs.shortcuts"/>
+    </choice>
+    <!--+==========================+
+        |    Package References    |
+        +==========================+-->
+    <pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64" active="is_intel()" version="45.3.0.0" auth="Root" installKBytes="149">#dfsfuse_x86_64.pkg</pkg-ref>
+    <pkg-ref id="com.google.drivefs.filesystems.dfsfuse.x86_64" active="is_amd()" version="45.3.0.0" auth="Root" installKBytes="149">#dfsfuse_x86_64.pkg</pkg-ref>
+    <pkg-ref id="com.google.pkg.Keystone" version="1.3.16.173" auth="Root" installKBytes="0">#Google_Software_Update.pkg</pkg-ref>
+    <pkg-ref id="com.google.drivefs.x86_64" active="is_intel()" version="48.0.13.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
+    <pkg-ref id="com.google.drivefs.x86_64" active="is_amd()" version="48.0.13.0" auth="Root" installKBytes="352568">#GoogleDrive_x86_64.pkg</pkg-ref>
+    <pkg-ref id="com.google.drivefs.shortcuts" version="48.0.13.0" auth="Root" installKBytes="220">#GoogleDriveShortcuts.pkg</pkg-ref>
+    <pkg-ref id="com.google.drivefs.filesystems.dfsfuse.arm64" active="is_arm()" version="45.3.0.0" auth="Root" installKBytes="184">#dfsfuse_arm64.pkg</pkg-ref>
+    <pkg-ref id="com.google.drivefs.arm64" active="is_arm()" version="48.0.13.0" auth="Root" installKBytes="350753">#GoogleDrive_arm64.pkg</pkg-ref>
+    <!--+==========================+
+        |    JavaScript Scripts    |
+        +==========================+-->
+    <script>
 
 	const __IC_FLAT_DISTRIBUTION__=true;
 	const IC_OS_DISTRIBUTION_TYPE_ANY=0;
@@ -59,66 +63,88 @@
 	function IC_CheckOS(inDiskType,inMustBeInstalled,inMinimumVersion,inMaximumVersion,inDistributionType)
 	{
 		var tOSVersion=undefined;
-
+		
 		/* Check Version Constraints */
-
+		
 		if (inDiskType==IC_DISK_TYPE_DESTINATION)
 		{
-			if (my.target.systemVersion!=undefined) { tOSVersion=my.target.systemVersion.ProductVersion;
+			if (my.target.systemVersion!=undefined)
+			{
+				tOSVersion=my.target.systemVersion.ProductVersion;
 			}
-
+			
 			/* Check if no OS is installed on the potential target */
-
+			
 			if (tOSVersion==undefined)
 			{
 				return (inMustBeInstalled==false);
 			}
-
+			
 			if (inMustBeInstalled==false)
 			{
-				return false; } } else { tOSVersion=system.version.ProductVersion;
+				return false;
+			}
 		}
-
+		else
+		{
+			tOSVersion=system.version.ProductVersion;
+		}
+		
 		if (system.compareVersions(tOSVersion,inMinimumVersion)==-1)
 			return false;
-
-		if (inMaximumVersion!=undefined &amp;&amp; system.compareVersions(tOSVersion,inMaximumVersion)==1)
+			
+		if (inMaximumVersion!=undefined &amp;&amp;
+			system.compareVersions(tOSVersion,inMaximumVersion)==1)
 			return false;
-
+		
 		/* Check Distribution Type */
-
+		
 		if (inDistributionType!=IC_OS_DISTRIBUTION_TYPE_ANY)
 		{
 			var tIsServer;
-
+			
 			if (system.compareVersions(tOSVersion,'10.8.0')==-1)
 			{
-				if (inDiskType==IC_DISK_TYPE_DESTINATION) { tIsServer=system.files.fileExistsAtPath(my.target.mountpoint+'/System/Library/CoreServices/ServerVersion.plist'); } else { tIsServer=system.files.fileExistsAtPath('/System/Library/CoreServices/ServerVersion.plist');
+				if (inDiskType==IC_DISK_TYPE_DESTINATION)
+				{
+					tIsServer=system.files.fileExistsAtPath(my.target.mountpoint+'/System/Library/CoreServices/ServerVersion.plist');
+				}
+				else
+				{
+					tIsServer=system.files.fileExistsAtPath('/System/Library/CoreServices/ServerVersion.plist');
 				}
 			}
 			else
 			{
-				if (inDiskType==IC_DISK_TYPE_DESTINATION) { tIsServer=system.files.fileExistsAtPath(my.target.mountpoint+'/Applications/Server.app'); } else { tIsServer=system.files.fileExistsAtPath('/Applications/Server.app');
+				if (inDiskType==IC_DISK_TYPE_DESTINATION)
+				{
+					tIsServer=system.files.fileExistsAtPath(my.target.mountpoint+'/Applications/Server.app');
+				}
+				else
+				{
+					tIsServer=system.files.fileExistsAtPath('/Applications/Server.app');
 				}
 			}
-
+			
 			if (inDistributionType==IC_OS_DISTRIBUTION_TYPE_CLIENT &amp;&amp; tIsServer==true)
 			{
 				return false;
 			}
-
+			
 			if (inDistributionType==IC_OS_DISTRIBUTION_TYPE_SERVER &amp;&amp; tIsServer==false)
 			{
 				return false;
 			}
 		}
-
+		
 		return true;
 	}
 
 	function volume_check()
 	{
-		var tResult; tResult=IC_CheckOS(IC_DISK_TYPE_DESTINATION,true,'10.11',undefined,IC_OS_DISTRIBUTION_TYPE_ANY);
+		var tResult;
+
+		tResult=IC_CheckOS(IC_DISK_TYPE_DESTINATION,true,'10.11',undefined,IC_OS_DISTRIBUTION_TYPE_ANY);
 
 		if (tResult==false)
 		{
@@ -143,5 +169,5 @@
 	{
 		return !(is_intel() || is_amd());
 	}
-	</script>
+    </script>
 </installer-gui-script>
